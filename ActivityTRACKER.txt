@@ -1,0 +1,189 @@
+// Ikki To Moshu  // Isho Nita Musha
+
+SPring / JPA
+Versionador GIT: github
+STS - Sprins Tool Suite (Eclipse Kepler SR2 4.3.2)
+Java 1.7 | Tomcat 7
+	
+ ### ### ###  ### ### ###  ### ### ### [TO-DO] ### ### ###  ### ### ###  ### ### ###
+-P Depos:
+	BNMX-Comision (cada cuarto)
+	Inv-RSH!!!
+-T javaeetutorial7 -> pagina = 53
+git remote set-url origin git@github.com:USERNAME/REPOSITORY2.git
+git remote set-url origin git@github.com:jwmsolutions/televisa-telecom-unity-portal.git
+## JACOBO:
+* Agregar Video y Telefonia
+	Como quedarian la BDs: Agregar columnas, tablas? O REUSAR alguna??
+	WS Siebel -> otros 2 servicios? // Consulta la AS400 -> otros 2 servicios?
+	Actualizar Diagrmas Flujo
+	Constriur: Codigo
+* Analizar cmas.com imagenes de Canales X Cd.
+- Ayudar a Vic: Herramienta de Reenvio de Correo Activación
+
+## ALAN:
+** FE ICOMS
+	TIEMPO = {5 dias Alan + 3 QA internos}
+* BUG de migracion (desahilitar sesion, no permitir actividades)
+* Servicios de Windows (EDC)
+	- Solucion VS: SVN, Corriendo
+		Corregir: Carga KATUN & Envio ICOMS
+	- Diagramas: de Flujo & de Conectividad [OK]
+* Cablemas Empresas (Autogestion)
+	- Solucion VS: SVN, Corriendo[OK]
+	- Documentación: Mapa de sitio (nivel de jerarquías) [OK]
+	- Diagrama de Conectividad [OK]
+* Ficha Técnica  / DDiseño -> para Carrusel Cmas [OK]
+	
+## VIC:
+** Liberar FIX: CUANDO??? =>Montar el ambiente de Testing para Cmas-MIT ICOMS (validar FT)
+** Liberar Carrusel
+** Liberar Herramienta de Reenvio de Correo Activación
+* Tralix [OK]
+* C+Empresas (Formulario en Linea) [OK]
+
+*** SEI --> ADQUEM
+
+*** Ligas Activacion para Vic/Karim: BAJAR Lista Depurada)
+
+- Temas en QA
+	Sin Filtro WifI: Liberar a QA
+	
+* cablemas.com/AtencionAClientes/IndexA.aspx		--> Agregar el campo MOTIVO (tipo combo-box)!!!
+
+- Seguimiento Adquem-OC.
+
+- Inventario de Apps Cmas: incluyendo conectividad, numero de solicitudes por día, issues conocidos.
+
+* WS Vitria: Caso "autlook" ==> WS.Vitria CU Registro Nuevo: Permitir que un usuario utilice un Contrato que ya este en nuestra BD si Bloqueado=2 (IdEstatus=4)!!!
+
+- Montar repositorio SVN BEST PRACTICES
+- SoftPHONE ICOMS:
+	- Corregir PRE y ajustar PRO.
+	- Probar WS => Cual es el WSLD del de produccion?????
+	- Probar Correo! por q lo como C+ EMPRESAS??? (Ver excel q mando Carlos)
+	[DONE] Corregir error q encontro alan -> Comente la propiedad ESTATUS (bool)que ponia 1 o 0, pero en la clase la regue y le pone -1!!!
+- Proyecto DEALRES :: SOLPED 10212091 ==> 10220964
+Se mando el Contrato Juridico de Cmas, pero aun no responden * PENDIENTE? preguntar a Ramon...
+
+
+[DONE]
+- Limpiar BD.Katun Contrato 8611727413: IdUsuario 344793, IdCliente 338222
+- Falla de GMAIL en SMTP. Contactar a Hervert.
+- Ariella/ mandar correo de que se corrigio el Usuario sistemassma@outlook.com
+>> Mandar correo a Luis (JWM):
+	* A nivel BD:
+		- Crear BD NUEVA (unificar ICOMS + KATUN)??
+		- Usar ambas BD (EXISTENTES) y crear SPs y Tablas (o Columans) nuevos??
+		-* O un 'MIX', dependiendo de si tratamos de usuarios EXISTENTES o NUEVOS.
+>> A Yusin y Ramon (Cuenta basada en Email & WiFi):
+	* ¿Qué haremos con las cuentas 'hijo' ya existentes para WiFi Cmas?
+		- ¿Notificar sobre el borrado (o bloqueo) de las cuentas hijo?
+	* Si el usuario (EXISTENTE) quiere entrar a WiFi, pero no ha entrado a SeL (no se ha MIGRADO), ¿qué debemos hacer?
+	--> Cerrar el modulo apra que no se creen mas C.Hijos
+		Ver cuantas cuentas hijo tenemos.
+
+>>>>>>>>>>>>>>>>> VER
+SELECT ROUTINE_SCHEMA, ROUTINE_NAME, ROUTINE_DEFINITION --count(*) = 67
+ FROM information_schema.ROUTINES 
+ WHERE ROUTINE_TYPE = 'PROCEDURE'
+  AND Left(Routine_Name, 3) NOT IN ('dt_', 'xp_', 'ms_')
+ ORDER BY ROUTINE_SCHEMA, ROUTINE_NAME
+  
+// CHAT pa Cvision --> Contacto: Alberto Rivera Rosas (TI Call Center)
+	CHAT (SERVICIO CLIENTES - @Cuernavaca)
+	 http://201.160.104.19/WebAPISamples75/Chat/HtmlChatFrameSet.jsp
+	CHAT (SOLO VENTAS - @Tijuana)
+	 http://201.160.104.19/WebAPISamples75/Chat_red/HtmlChatFrameSet.jsp
+// Tickets vi FB & Twitter: Veronica Aicelit Pelaez Lopez <vpelaez@cablemas.com.mx> >>> AMBIENTE DE DESARROLLO
+___________________________________________________________________________________________________________________
+
+ > > > Week 29 Jul - 02 Ago:
+
+Lu:
+[Oper] Requerimiento 9997 en FootPrints: Restaurar EDCs del Hotel en Chetumal.
+[OBI] Coordinar reuniones y agendar salas.
+	Validar entregables (documentación).
+[SoftP-ICOMS] Validar cambios en PRE.
+
+Ma:
+[Oper] EDC no se visualiza en Katun.
+[SoftP-ICOM] Se activo una cuenta inactiva. Se informó a usuario de mercadotecnia. 1040791-01 de la ciudad de Cuernavaca
+[SoftP-ICOM] Se corrigió SP defectuoso. Solución: crear un 
+[SoftP-ICOM] Se contacto a  mediación para ponernos de acuerdo en las pruebas. Se subió a Marisol a produccion.
+
+Mi:
+[Oper] Requerimiento 10016 en FootPrints: Restaurar EDCs.
+
+JU:
+[SoftP-ICOM] Se habló con Juanito y con Luis para que prueben mi código
+
+VI:
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+"Retards":
+2-Oct_0928 | 3-Oct_0916 | 9-Oct_0916 | 14-Oct_091600! | 15-Oct_0924 | 
+
+============================================================================================================
+IDDivision	Descripcion	IDSite
+11	Tijuana	1
+12	Ensenada	1
+13	Tecate	1
+14	Mexicali	1
+15	Rosarito	1
+16	Iguala	3
+17	Lagos	3
+18	Minatitlan	3
+21	Mante	3
+22	Valles	3
+23	Ocotlan	3
+24	Poza Rica	3
+25	Coatzintla	3
+26	Tula	3
+27	Tepeji del Rio	3
+28	UMAN	5
+29	Puerto Progreso	5
+30	Campeche	4
+31	Merida	5
+32	Chetumal	5
+33	Mahahual	5
+34	VALLADOLID	5
+35	Cancún	6
+36	Isla Mujeres	6
+37	Playa del Carmen	6
+38	Cozumel	6
+39	Tulum	6
+40	Cuernavaca	7
+41	Cuautla	7
+42	Yautepec	7
+43	Acapulco	7
+45	Oaxaca	7
+46	Chilpancingo	7
+49	Zumpango	7
+51	Chihuahua	2
+52	Delicias	2
+53	Cuauhtémoc 	2
+54	Camargo	2
+55	Parral	2
+56	Meoqui	2
+60	Cd. Juarez	2
+71	Coatzacoalcos	3
+72	Agua Dulce	3
+73	Nanchital	3
+74	Las Choapas	3
+75	Jaltipan	3
+76	Cosoleacaque	3
+81	Ixtapaluca-Los Reyes 	3
+83	Chimalhuacan	3
+84	San Buenaventura	3
+86	Tecamac	3
+87	San Vicente Chicoloapan	3
+89	Xico	3
+90	Tihuatlan	3
+91	YAHUALICA	3
+92	Villa Hidalgo	3
+93	Teocaltiche	3
+94	Ojuelos	3
+95	Encarnacion Diaz	3
+96	Calvillo	3
